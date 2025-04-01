@@ -120,7 +120,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show date picker(custom theme &date time range)',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -134,7 +134,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show time picker',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show 12H time picker with AM/PM',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -164,7 +164,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show date time picker (Chinese)',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -178,7 +178,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show date time picker (English-America)',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -190,11 +190,11 @@ class HomePage extends StatelessWidget {
                     print('confirm $date');
                   },
                       currentTime: DateTime(2008, 12, 31, 23, 12, 34),
-                      locale: picker.LocaleType.nl);
+                      locale: picker.LocaleType.jp);
                 },
                 child: const Text(
-                  'show date time picker (Dutch)',
-                  style: TextStyle(color: Colors.blue),
+                  'show date time picker (日本)',
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -210,7 +210,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show date time picker (Russian)',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -226,7 +226,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show date time picker in UTC (German)',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
             TextButton(
                 onPressed: () {
@@ -242,7 +242,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text(
                   'show custom time picker,\nyou can custom picker model like this',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
           ],
         ),
