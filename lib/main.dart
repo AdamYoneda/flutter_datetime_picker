@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart'
     as picker;
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
@@ -182,15 +183,44 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  picker.DatePicker.showDateTimePicker(context,
-                      showTitleActions: true, onChanged: (date) {
-                    print(
-                        'change $date in time zone ${date.timeZoneOffset.inHours}');
-                  }, onConfirm: (date) {
-                    print('confirm $date');
-                  },
-                      currentTime: DateTime(2008, 12, 31, 23, 12, 34),
-                      locale: picker.LocaleType.jp);
+                  const fontWeight = FontWeight.w500;
+                  picker.DatePicker.showDateTimePicker(
+                    context,
+                    showTitleActions: true,
+                    onChanged: (date) {
+                      print(
+                          'change $date in time zone ${date.timeZoneOffset.inHours}');
+                    },
+                    onConfirm: (date) {
+                      print('confirm $date');
+                    },
+                    currentTime: DateTime(2008, 12, 31, 23, 12, 34),
+                    locale: picker.LocaleType.jp,
+                    theme: picker.DatePickerTheme(
+                      cancelStyle: TextStyle(
+                        color: Colors.grey.shade800,
+                        fontWeight: fontWeight,
+                        fontFamily:
+                            GoogleFonts.notoSansJp(fontWeight: fontWeight)
+                                .fontFamily,
+                        fontFamilyFallback: [
+                          GoogleFonts.notoSansJp(fontWeight: fontWeight)
+                              .fontFamily,
+                        ].whereType<String>().toList(),
+                      ),
+                      doneStyle: TextStyle(
+                        color: Colors.primaries[10],
+                        fontWeight: fontWeight,
+                        fontFamily:
+                            GoogleFonts.notoSansJp(fontWeight: fontWeight)
+                                .fontFamily,
+                        fontFamilyFallback: [
+                          GoogleFonts.notoSansJp(fontWeight: fontWeight)
+                              .fontFamily,
+                        ].whereType<String>().toList(),
+                      ),
+                    ),
+                  );
                 },
                 child: const Text(
                   'show date time picker (日本)',

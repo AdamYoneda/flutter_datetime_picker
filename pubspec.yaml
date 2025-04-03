@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_datetime_picker_plus: ^2.2.0
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -34,4 +35,4 @@ flutter_gen:
 
   assets:
     exclude:
-      - assets/google_fonts
+      - assets/google_fonts/
