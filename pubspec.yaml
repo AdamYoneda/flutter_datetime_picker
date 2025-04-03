@@ -5,7 +5,8 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: 3.24.0
 
 dependencies:
   flutter:
@@ -16,6 +17,21 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  flutter_gen_runner: 5.6.0
+  build_runner: 2.4.12
 
 flutter:
   uses-material-design: true
+
+flutter_gen:
+  output: lib/gen/
+  line_length: 80
+
+  integrations:
+    flutter_svg: true
+    rive: false
+    lottie: false
+
+  assets:
+    exclude:
+      - assets/google_fonts

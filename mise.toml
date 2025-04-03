@@ -1,0 +1,12 @@
+[tools]
+flutter = "3.24.0"
+task = "1"
+
+[tasks.init]
+description = "Initialize Flutter workspace (mise install, flutter pub get, code generation)"
+run = [
+  "mise install",
+  "flutter pub get",
+  "dart run build_runner clean",
+  "dart run build_runner build --delete-conflicting-outputs"
+]
