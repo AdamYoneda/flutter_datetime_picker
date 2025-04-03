@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart'
     as picker;
+import 'package:flutter_datetime_picker_plus/src/datetime_picker_theme.dart'
+    as picker_theme;
 import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
@@ -181,6 +183,9 @@ class HomePage extends StatelessWidget {
                   'show date time picker (English-America)',
                   style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
+
+            //-------------------------------------------------------------
+            //-------------------------------------------------------------
             TextButton(
                 onPressed: () {
                   const fontWeight = FontWeight.w500;
@@ -196,9 +201,9 @@ class HomePage extends StatelessWidget {
                     },
                     currentTime: DateTime(2008, 12, 31, 23, 12, 34),
                     locale: picker.LocaleType.jp,
-                    theme: picker.DatePickerTheme(
+                    theme: picker_theme.DatePickerTheme(
                       cancelStyle: TextStyle(
-                        color: Colors.grey.shade800,
+                        color: Colors.grey.shade600,
                         fontWeight: fontWeight,
                         fontFamily:
                             GoogleFonts.notoSansJp(fontWeight: fontWeight)
@@ -207,9 +212,10 @@ class HomePage extends StatelessWidget {
                           GoogleFonts.notoSansJp(fontWeight: fontWeight)
                               .fontFamily,
                         ].whereType<String>().toList(),
+                        fontSize: 16,
                       ),
                       doneStyle: TextStyle(
-                        color: Colors.primaries[10],
+                        color: Colors.blue.shade900,
                         fontWeight: fontWeight,
                         fontFamily:
                             GoogleFonts.notoSansJp(fontWeight: fontWeight)
@@ -218,6 +224,19 @@ class HomePage extends StatelessWidget {
                           GoogleFonts.notoSansJp(fontWeight: fontWeight)
                               .fontFamily,
                         ].whereType<String>().toList(),
+                        fontSize: 16,
+                      ),
+                      itemStyle: TextStyle(
+                        color: Colors.grey.shade900,
+                        fontWeight: fontWeight,
+                        fontFamily:
+                            GoogleFonts.notoSansJp(fontWeight: fontWeight)
+                                .fontFamily,
+                        fontFamilyFallback: [
+                          GoogleFonts.notoSansJp(fontWeight: fontWeight)
+                              .fontFamily,
+                        ].whereType<String>().toList(),
+                        fontSize: 18,
                       ),
                     ),
                   );
